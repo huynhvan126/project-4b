@@ -8,6 +8,6 @@ def fib(n):
     if n <= 0:
         raise ValueError("Error - Input must be positive")
     a, b = 1, 1
-    for _ in range(2, n):
+    for i in range(2, n):
         a, b = b, a + b
         return b if n > 1 else a
