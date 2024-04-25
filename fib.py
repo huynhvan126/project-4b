@@ -7,7 +7,12 @@ def fib(n):
     n (int): the position of the number in the Fibonacci sequence"""
     if n <= 0:
         raise ValueError("Error - Input must be positive")
-    a, b = 1, 1
-    for i in range(2, n):
-        a, b = b, a + b
-        return b if n > 1 else a
+    a = 1
+    b = 1
+    fib_number = 0
+    if n == 1 or n == 2:
+        return 1
+    for _ in range(3, n + 1):
+        fib_number = a + b
+        a, b = b, fib_number
+    return fib_number
